@@ -29,9 +29,10 @@ function validateInput(testInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    let pilotValidation = validateInput(pilot)
+   let pilotValidation = validateInput(pilot)
    if (pilotValidation !== "Empty" || pilotValidation !== "Is a Number") {
     alert(" Not a valid Input")
+    
    }
    let coPilotValidation = validateInput(copilot)
    if (coPilotValidation !== "Empty" || coPilotValidation !== "Is a Number") {
@@ -58,7 +59,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     launchStatus.style.color = 'red'
     list.style.visibilty = 'visible'
 
-   let cargoStatus = list.querySelector("li[id=cargoStatus]")
+    let cargoStatus = list.querySelector("li[id=cargoStatus]")
    //let launchStatus = document.querySelector("h2[id=launchStatus]")
    if (cargoLevel >= 10000) {
     launchStatus.innerHTML = "Shuttle not ready for launh"
@@ -68,11 +69,11 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    }
     else {
         launchStatus.style.color = 'green'
-        launchStatus.innerHTML = "Shuttle is ready for launch"
+        launchStatus.innerHTML = "Shuttle is ready for launh"
     }
 
    }
-
+}
 
 
 async function myFetch() {
@@ -93,4 +94,3 @@ module.exports.validateInput = validateInput;
 module.exports.formSubmission = formSubmission;
 module.exports.pickPlanet = pickPlanet; 
 module.exports.myFetch = myFetch;
-}
