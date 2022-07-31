@@ -15,8 +15,7 @@
          let copilotNameInput = document.querySelector("input[name=copilotName]");
          let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
          let faultyItems = document.querySelector("div[id=faultyItems]")
-         
-         console.log('HI')
+        
         formSubmission(document, faultyItems, pilotNameInput, copilotNameInput, fuelLevelInput, cargoMassInput)
         });
         let listedPlanets;
